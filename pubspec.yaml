@@ -1,0 +1,36 @@
+name: iceboundmythgame
+description: Icebound Myth — social casino
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  audioplayers: ^6.5.1
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/bg/
+    - assets/brand/
+    - assets/chars/
+    - assets/symbols/
+    - assets/bonus/
+    - assets/sounds/
+  fonts:
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel.ttf
+    - family: CinzelDeco
+      fonts:
+        - asset: assets/fonts/CinzelDecorative-Bold.ttf
+          weight: 700
