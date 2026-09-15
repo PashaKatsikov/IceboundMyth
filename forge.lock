@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-09-15T18:29:49.396269",
+  "displayName": "Icebound Myth",
+  "applicationId": "com.iceboundmyth.iceboundmythgame",
+  "packageSlug": "iceboundmythgame",
+  "configEndpointUrl": "https://iceboundmyth.link/edge/sync",
+  "privacyUrl": "https://iceboundmyth.link/privacy-policy",
+  "codecFamily": "fnv_lcg",
+  "codecStreamLen": 29,
+  "chromeVersion": "149.0.7742.112",
+  "keyPrefix": "ic7_",
+  "channelId": "im_rewards",
+  "timings": {
+    "permissionSnoozeSeconds": 313200,
+    "organicRescueDelay": 9,
+    "verdictTimeoutSeconds": 14,
+    "firstInstallAwaitSeconds": 33,
+    "returningInstallAwaitSeconds": 8,
+    "deepLinkAwaitSeconds": 6,
+    "reachProbeTimeoutSeconds": 8,
+    "reachDropDebounceMs": 640,
+    "redirectLoopRetries": 3,
+    "cachedUrlLifetimeSeconds": 604800
+  }
+}

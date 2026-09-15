@@ -1,7 +1,7 @@
 name: iceboundmythgame
-description: Icebound Myth — social casino
+description: "Icebound Myth — spin mythic frozen reels and unlock wheel and fish bonus rounds."
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: ^3.12.2
@@ -10,12 +10,32 @@ dependencies:
   flutter:
     sdk: flutter
   audioplayers: ^6.5.1
-  shared_preferences: ^2.5.3
+  shared_preferences: ^2.5.5
+
+  # ── Relay flow stack ──
+  webview_flutter: ^4.14.0
+  webview_flutter_android: ^4.13.0
+  connectivity_plus: ^7.1.1
+  appsflyer_sdk: ^6.18.0
+  # Firebase — tested-compatible set (see relay handoff §6).
+  # ⚠️ Do NOT bump firebase_app_check to 0.4.8 — it breaks the build.
+  firebase_core: ^4.14.0
+  firebase_messaging: ^16.6.0
+  firebase_app_check: 0.4.7
+  flutter_local_notifications: ^22.0.1
+  flutter_secure_storage: ^10.3.1
+  device_info_plus: 11.4.0
+  http: ^1.6.0
+  url_launcher: ^6.3.2
+  # HMAC + SHA-256 for the veil wire envelope (veil_pack.dart).
+  crypto: ^3.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  image: ^4.8.0
 
 flutter:
   uses-material-design: true
@@ -34,3 +54,12 @@ flutter:
       fonts:
         - asset: assets/fonts/CinzelDecorative-Bold.ttf
           weight: 700
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/brand/app_icon.png"
+  adaptive_icon_background: "assets/brand/app_icon_background.png"
+  adaptive_icon_foreground: "assets/brand/app_icon.png"
+  adaptive_icon_foreground_inset: 16
+  min_sdk_android: 26

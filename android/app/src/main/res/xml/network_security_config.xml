@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Partners routinely send HTTP push URLs and OAuth redirects through
+    cleartext intermediaries. A "false" base-config silently breaks
+    cold-start push taps (gray_part_pitfalls §17). Behave like Chrome:
+    cleartext permitted, system trust anchors.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>

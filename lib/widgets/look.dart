@@ -258,11 +258,32 @@ class LoadBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, box) {
       final w = wide ? box.maxWidth * 0.62 : box.maxWidth * 0.78;
+      final pct = (t * 100).clamp(0, 100).round();
       return Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('${(t * 100).clamp(0, 100).toInt()}%', style: cinzel(size: 15, color: C.goldPale)),
-          const SizedBox(height: 8),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+            decoration: BoxDecoration(
+              color: const Color(0xDD140204),
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: C.gold, width: 1.2),
+              boxShadow: const [
+                BoxShadow(color: Color(0xAA000000), blurRadius: 8, offset: Offset(0, 2)),
+              ],
+            ),
+            child: Text(
+              '$pct%',
+              style: cinzel(size: 20, color: C.cream, w: FontWeight.w700).copyWith(
+                height: 1.0,
+                shadows: const [
+                  Shadow(color: Color(0xFF000000), blurRadius: 6, offset: Offset(0, 1)),
+                  Shadow(color: Color(0xFF000000), blurRadius: 2),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
           Container(
             width: w,
             height: 22,
@@ -279,12 +300,19 @@ class LoadBar extends StatelessWidget {
               child: Stack(
                 children: [
                   const ColoredBox(color: Color(0xFF1A0508)),
-                  FractionallySizedBox(
-                    widthFactor: t.clamp(0.02, 1),
-                    child: const DecoratedBox(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [Color(0xFF7A1020), C.hot, C.gold, C.hot],
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: FractionallySizedBox(
+                      widthFactor: t.clamp(0.0, 1.0),
+                      heightFactor: 1,
+                      alignment: Alignment.centerLeft,
+                      child: const SizedBox.expand(
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Color(0xFF7A1020), C.hot, C.gold, C.hot],
+                            ),
+                          ),
                         ),
                       ),
                     ),

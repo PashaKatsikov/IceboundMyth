@@ -1,0 +1,22 @@
+{
+  "//": "Placeholder. Download the REAL google-services.json from the Firebase console for this project and drop it next to this file. It is git-ignored and never committed.",
+  "project_info": {
+    "project_number": "<FIREBASE_PROJECT_NUMBER>",
+    "project_id": "<firebase-project-id>",
+    "storage_bucket": "<firebase-project-id>.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "<mobilesdk_app_id>",
+        "android_client_info": {
+          "package_name": "com.iceboundmyth.iceboundmythgame"
+        }
+      },
+      "api_key": [
+        { "current_key": "<ANDROID_API_KEY>" }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}

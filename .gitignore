@@ -49,6 +49,12 @@ app.*.map.json
 *.keystore
 android/key.properties
 
+# Firebase config — never commit the real file (only the .example)
+android/app/google-services.json
+
+# Forge recipe — contains plaintext secrets
+tool/forge/recipe.json
+
 # Local release artifacts
 /release/
 
