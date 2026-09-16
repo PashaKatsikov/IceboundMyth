@@ -25,7 +25,7 @@ if (hasKeystore) {
 android {
     namespace = "com.iceboundmyth.iceboundmythgame"
 
-    // Relay stack floors: targetSdk = 35, minSdk = 26 (Android 8.0),
+    // Relay stack floors: targetSdk = 36, minSdk = 26 (Android 8.0),
     // compileSdk = 36 for plugin compatibility (gray_part_pitfalls §2).
     compileSdk = 36
     ndkVersion = flutter.ndkVersion
@@ -40,7 +40,7 @@ android {
     defaultConfig {
         applicationId = "com.iceboundmyth.iceboundmythgame"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
